@@ -1,8 +1,15 @@
 import React from "react";
 import classes from "./Reset.module.css"
 
-export const Reset = () => {
+type ResetPropsType = {
+    // setCount:()=>void
+    reset:()=>void;
+}
+
+export const Reset = (props:ResetPropsType) => {
     return(
-        <button className={classes.Reset}>RESET</button>
+        <button
+         className={classes.Reset}
+         onClick={props.reset}>RESET</button>
     )
 }
