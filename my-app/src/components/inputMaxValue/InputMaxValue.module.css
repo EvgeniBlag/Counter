@@ -1,0 +1,13 @@
+
+
+.InputMaxValue{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.InputMaxValueAll{
+    display: flex;
+    padding-left: 60px;
+    border: 1px,solid,red;
+}

@@ -4,3 +4,6 @@
     padding:15px;
     border-radius: 10px;
   }
+  .IncDesabled{
+    opacity: 0,5;
+  }

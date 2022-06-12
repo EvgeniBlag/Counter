@@ -1,41 +1,46 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Inc } from './components/inc/Inc';
-import { Input } from './components/input/Input';
-import { Reset } from './components/reset/Reset';
+import { FullInput1 } from './components/fulInput1/FullInput1';
+import { FullInput2 } from './components/fullinput2/FullInput2';
+
+
+
 
 function App() {
 
+ const[maxValue,setMaxValue]=useState(0)
+ const[startValue,setStartValue]=useState(0)
   const[count,setCount]=useState(0)
+  
+
+  const addClick = () => {
+     setStartValue(count)
+     }
 
   const increment = () => {
-
-        setCount(count + 1 )
-}
+        if(count < 5)
+         setCount(count + 1 )
+        }
 
    const reset =()=>{
      setCount(0)
+     setStartValue(0)
+     
    }
 
   return (
   
     <div className='Hello'>
+   
 
-      <Input  count={count}
-      />
+     <FullInput1 count={count} increment={increment} reset={reset} />
 
-      <div>
-        <Inc increment={increment}/>
-        <Reset reset={reset} />
-      </div>
+     <FullInput2 maxValue={maxValue} setMaxValue={setMaxValue} addClick={addClick} count={count} setStartValue={setStartValue} startValue={startValue} />
+   
+  </div>
 
-    </div>
-
-       
-       
-      
-    
+  
   );
-}
+  }
 
 export default App;

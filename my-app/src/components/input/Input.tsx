@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import classes from "./Input.module.css"
 
 type InputPropsType = {
@@ -7,17 +7,12 @@ type InputPropsType = {
 
 export const Input = (props:InputPropsType) => {
 
- 
-
     return(
-        <div>
+        <div >
             <input
-                className={classes.Input}
-                type="number"
-                value={props.count}
-                
-            />
-                   
+                className={classes.Input + (props.count === 5 ? " " +  classes.numberAlert : '')}
+                value={props.count}       
+            />         
         </div>
     )
 }
