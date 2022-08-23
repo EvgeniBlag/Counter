@@ -31,13 +31,24 @@ function App() {
   return (
   
     <div className='Hello'>
-   
 
-     <FullInput1 count={count} increment={increment} reset={reset} />
 
-     <FullInput2 maxValue={maxValue} setMaxValue={setMaxValue} addClick={addClick} count={count} setStartValue={setStartValue} startValue={startValue} />
-   
-  </div>
+      <FullInput1
+        count={count}
+        increment={increment}
+        reset={reset}
+      />
+
+      <FullInput2
+        maxValue={maxValue}
+        setMaxValue={setMaxValue}
+        addClick={addClick}
+        count={count}
+        setStartValue={setStartValue}
+        startValue={startValue}
+      />
+
+    </div>
 
   
   );

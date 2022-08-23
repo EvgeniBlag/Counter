@@ -17,7 +17,9 @@ type FullInputPropsType = {
 
 export const FullInput2 = (props:FullInputPropsType) => {
     return(
-        <div className="InputMaxValueAll">
+        
+        <div style={{textAlign:"center"}}>
+
         <InputMaxValue maxValue={props.maxValue} setMaxValue={props.setMaxValue} /> 
    
         <InputStartValue    startValue={props.startValue}/> 
