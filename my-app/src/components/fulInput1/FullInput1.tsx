@@ -1,27 +1,29 @@
 import React from "react";
 import { Inc } from "../inc/Inc";
-import { Input } from "../input/Input";
 import { Reset } from "../reset/Reset";
+import classes from "../input/Input.module.css"
 
 
 type FullInput1PropsType = {
  count:number
  increment:()=> void
  reset:()=>void
- 
+ maxValue:number
 }
 
 
-export const FullInput1 = (props:FullInput1PropsType) => {
-    return(
-        <>
-        <div>
-        <Input count={props.count}/>
+export const FullInput1 = (props: FullInput1PropsType) => {
+  return (
+    <>
       <div>
-         <Inc increment={props.increment} count={props.count} /> 
-        <Reset reset={props.reset} count={props.count} />
+      <div  className={classes.Input + (props.count === props.maxValue ? " " +  classes.numberAlert : '')}>
+        {props.count}
+        </div> 
+        <div>
+          <Inc increment={props.increment} count={props.count} maxValue={props.maxValue} />
+          <Reset reset={props.reset} count={props.count} />
+        </div>
       </div>
-     </div>
-     </>
-    )
+    </>
+  )
 }

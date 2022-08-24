@@ -5,13 +5,12 @@ import { InputStartValue } from "../inputStartValue/InputStartValue";
 
 
 type FullInputPropsType = {
-    maxValue:number
+    maxValue: number
     setMaxValue: Dispatch<SetStateAction<number>>
-   addClick:()=>void
-   startValue:number
-
-   count:number
-   setStartValue: Dispatch<SetStateAction<number>>
+    addClick: () => void
+    startValue: number
+    count: number
+    setStartValue: Dispatch<SetStateAction<number>>
 }
 
 
@@ -20,11 +19,11 @@ export const FullInput2 = (props:FullInputPropsType) => {
         
         <div style={{textAlign:"center"}}>
 
-        <InputMaxValue maxValue={props.maxValue} setMaxValue={props.setMaxValue} /> 
+        <InputMaxValue maxValue={props.maxValue}  setMaxValue={props.setMaxValue} /> 
    
-        <InputStartValue    startValue={props.startValue}/> 
+        <InputStartValue  startValue={props.startValue}  setStartValue={props.setStartValue}/> 
       
-        <ButtonSet addClick={props.addClick} count={props.count} setStartValue={props.setStartValue} /> 
+        <ButtonSet addClick={props.addClick}  /> 
         </div>
     )
 }

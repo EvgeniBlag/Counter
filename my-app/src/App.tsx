@@ -14,11 +14,11 @@ function App() {
   
 
   const addClick = () => {
-     setStartValue(count)
+    setCount(startValue)
      }
 
   const increment = () => {
-        if(count < 5)
+        if(count < maxValue)
          setCount(count + 1 )
         }
 
@@ -37,6 +37,7 @@ function App() {
         count={count}
         increment={increment}
         reset={reset}
+        maxValue={maxValue}
       />
 
       <FullInput2
